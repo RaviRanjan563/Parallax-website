@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#wrapper {
+
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    /* TO DO 3D EFFECT */
+
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    /* TO PRESERVE THE PREVIOUS 3D EFFECT */
+    z-index: -1;
+    /* SHOW THE HIDDEN CONTENT BY LAYERS */
+}
+
+.background {
+    transform: translateZ(-40px) scale(6);
+}
+
+.foreground {
+    transform: translateZ(-40px) scale(5);
+
+}
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* TO COVER VIEW PORT */
+    z-index: -1;
+
+}
+
+h1 {
+    position: absolute;
+
+    top: 5rem;
+    font-size: 10rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+section {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.secHeading {
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    padding: 0 10 rem;
+    margin: 5rem 0;
+}
+
+.bg {
+
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    /* FIX THE BACKGROUND FOR SCROLLING */
+    background-size: cover;
+    /* COVER THE IMAGE FULL*/
+    background-position: center;
+    /* FIX THE IMAGE AT CENTRE */
+    height: 500px;
+
+
+}
+
+.desc {
+
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+#biking {
+    transform: translateX(-60%) translateX(-60%) translateY(-50%);
+    left: 60%;
+    top: 50%;
+}
+
+#paragliding {
+    transform: translateX(-60%) translateX(-60%) translateY(-50%);
+    left: 68%;
+    top: 50%;
+}
+
+#surfing {
+    transform: translateX(-60%) translateX(-60%) translateY(-50%);
+    left: 65%;
+    top: 50%;
+}
+
+.bg1 {
+    background-image: url(sport-1.jpg);
+
+}
+
+.bg2 {
+    background-image: url(sport-2.jpg);
+
+}
+
+.bg3 {
+    background-image: url(sport-3.jpg);
+
+}
